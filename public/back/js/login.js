@@ -50,6 +50,8 @@ $(function () {
         }
 
     })
+
+
     $("#form").on('success.form.bv', function (e) {
         //阻止表单默认的提交事件
         e.preventDefault();
@@ -61,7 +63,8 @@ $(function () {
                 data: $("#form").serialize(),
                 dataType: "json",
                 success: function (info) {
-                    console.log(info);
+
+                    // console.log(info);
                     if (info.success) {
                         location.href = "index.html";
                     }
