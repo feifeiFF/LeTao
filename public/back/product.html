@@ -2,6 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+</body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
@@ -26,39 +35,17 @@
         <ul>
             <li><a href="user.html" ><i class="glyphicon glyphicon-user"></i><span>用户管理</span></a></li>
             <li>
-                <a href="javascript:void(0);" class="category"><i class=" glyphicon glyphicon-list"></i><span>分类管理</span></a>
-                <div class="child"  style="display: none">
+                <a href="javascript:void(0);"  class="category"><i class="category glyphicon glyphicon-list"></i><span>分类管理</span></a>
+                <div class="child " style="display: none">
                     <a href="first.html" class="first">一级分类</a>
                     <a href="second.html" class="second">二级分类</a>
                 </div>
             </li>
-            <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+            <li><a href="product.html" class="current"><i class="glyphicon glyphicon-tags"></i><span>商品管理</span></a></li>
+
         </ul>
     </div>
 
-</div>
-
-<!--乐淘主面板-->
-<div class="lt_main">
-    <!--topBar -->
-    <div class="lt_topBar">
-        <a href="#" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
-        <a href="#" class="pull-right icon_logOut " data-toggle="modal" data-target=".bs-example-modal-md"><i class="glyphicon glyphicon-log-out"></i></a>
-    </div>
-
-    <!--内容区-->
-    <div class="container-fluid ">
-        <!--路径导航-->
-        <ol class="breadcrumb">
-            <li><a href="index.html">管理系统</a></li>
-            <li class="active">首页</li>
-        </ol>
-
-        <div class="lt_content clearfix">
-              <div class="echars_left pull-left"></div>
-              <div class="echars_right pull-right"></div>
-        </div>
-    </div>
 </div>
 
 <!--乐淘模态框-->
@@ -83,13 +70,54 @@
 
 
 
+<!--乐淘主面板-->
+<div class="lt_main">
+    <!--topBar -->
+    <div class="lt_topBar">
+        <a href="#" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
+        <a href="#" class="pull-right icon_logOut" data-toggle="modal" data-target=".bs-example-modal-md"><i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+
+    <!--内容区-->
+    <div class="container-fluid">
+        <!--路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="index.html">管理系统</a></li>
+            <li class="active">商品管理</li>
+        </ol>
+
+        <!--表格-->
+        <table class="table table-hover table-bordered">
+            <thead>
+            <tr>
+                <th> 序号 </th>
+                <th> 用户名</th>
+                <th> 手机号 </th>
+                <th> 状态 </th>
+                <th> 操作 </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>4545</td>
+                <td>4545</td>
+                <td>4545</td>
+                <td>4545</td>
+                <td>4545</td>
+            </tr>
+            </tbody>
+        </table>
+
+
+    </div>
+</div>
+
 </body>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
-<script src="./lib/echarts/echarts.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/isLogin.js"></script>
-<script src="./js/index.js"></script>
 </html>

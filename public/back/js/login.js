@@ -64,7 +64,6 @@ $(function () {
                 dataType: "json",
                 success: function (info) {
 
-                    // console.log(info);
                     if (info.success) {
                         location.href = "index.html";
                     }
