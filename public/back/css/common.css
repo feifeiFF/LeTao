@@ -10,6 +10,9 @@ ul {
     padding: 0;
     margin: 0;
 }
+.mt_20{
+    margin-top: 20px;
+}
 .lt_aside a{
     text-decoration: none;
 }
