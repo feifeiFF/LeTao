@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>后台管理系统首页</title>
+</head>
+<body>
+<!--侧边栏-->
+<div class="lt_aside body_bg">
+    <div class="lt_aside_title">
+        <a> 乐淘淘 </a>
+    </div>
+    <div class="lt_user">
+        <img src="./images/default.png" alt="">
+        <p>超级管理员</p>
+    </div>
+    <div class="lt_nav">
+        <ul>
+            <li><a href="user.html" class="now"><i class="glyphicon glyphicon-user"></i>用户管理</a></li>
+            <li><a href="javascript:void(0);" class="cate"> <i class="glyphicon glyphicon-list"></i>分类管理 </a>
+                <div class="child" style="display: none">
+                    <a href="first.html">一级分类</a>
+                    <a href="second.html">二级分类</a>
+                </div>
+            </li>
+            <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i>产品管理</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<!--乐淘主面板-->
+<div class="lt_main">
+
+    <!--乐淘 顶部 固定条 -->
+    <div class="topBar">
+        <a href="#" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
+        <a href="#" class="pull-right icon_logOut"> <i class="glyphicon glyphicon-log-out"></i></a>
+    </div>
+    <div class="container-fluid ">
+
+        <!-- 路径导航-->
+        <ol class="breadcrumb">
+            <li><a href="#">管理系统</a></li>
+            <li class="active"> 用户管理 </li>
+        </ol>
+    </div>
+</div>
+
+
+
+</body>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script src="./lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/nprogress/nprogress.js"></script>
+<script src="./js/isLogin.js"></script>
+<script src="./js/common.js"></script>
+</html>

@@ -7,7 +7,7 @@ $(function () {
     * */
 
 
-//  初始化表单校验插件
+ //  初始化表单校验插件
     $("#form").bootstrapValidator({
         //指定校验时的图标显示，默认是 bootstrap 风格。
         feedbackIcons: {
@@ -51,7 +51,7 @@ $(function () {
 
     })
 
-
+ // 当表单校验成功时，会触发success.form.bv事件，此时会提交表单，这时候，通常我们需要禁止表单的自动提交，使用ajax进行表单的提交。
     $("#form").on('success.form.bv', function (e) {
         //阻止表单默认的提交事件
         e.preventDefault();
@@ -81,11 +81,13 @@ $(function () {
             }
         );
 
-        $('[type="reset"]').click(function () {
-            $("#form").data('bootstrapValidator').resetForm();
-        })
+
     })
 
+// 重置表单
+    $('[type="reset"]').click(function () {
+        $("#form").data('bootstrapValidator').resetForm();
+    })
 
 
 });

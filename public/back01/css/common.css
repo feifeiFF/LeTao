@@ -1,0 +1,139 @@
+
+body,html{
+    width: 100%;
+    height: 100%;
+}
+ul{
+     list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active
+{
+    text-decoration: none;
+
+}
+.body_bg{
+    background-color: #222D32;
+}
+.mt_150{
+     margin-top: 150px;
+}
+
+ .panel .panel-heading{
+     height: 60px;
+
+
+}
+ .panel .panel-heading h3{
+    font-size: 20px;
+    line-height: 40px;
+}
+
+ /* 乐淘侧面栏 */
+ .lt_aside{
+     position: fixed;
+     left: 0px;
+     top: 0px;
+     height: 100%;
+     width: 180px;
+     z-index: 9999;
+     transition: all 1s;
+ }
+.lt_aside.current{
+    left: -180px;
+
+}
+ .lt_aside_title{
+     width: 100%;
+     height: 50px;
+     background-color: #367FA9;
+ }
+.lt_aside_title a{
+    height: 100%;
+    display: block;
+    font-size: 24px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    cursor: pointer;
+}
+.lt_user {
+    width: 180px;
+    height: 180px;
+    padding-top: 30px;
+    text-align: center;
+}
+.lt_user img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+}
+.lt_user p{
+    font-size: 20px;
+    color: #fff;
+    height: 50px;
+    line-height: 50px;
+}
+.lt_nav li a {
+    padding-left: 40px;
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    border-left: 3px solid transparent;
+}
+.lt_nav li a.now{
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
+.lt_nav li a i{
+    padding-right: 5px;
+}
+.lt_nav li .child a{
+    padding-left: 60px;
+}
+
+
+/* 乐淘主面板*/
+.lt_main{
+    height: 1000px;
+    /*避开侧边栏的180宽*/
+    padding-left: 180px;
+    padding-top: 50px;
+    transition: all 1s;
+}
+.lt_main.current{
+     padding-left: 0;
+}
+.lt_main  .topBar{
+    padding-left: 180px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 999    ;
+    width: 100%;
+    height: 50px;
+    background-color: #3C8DBC;
+    transition: all 1s;
+}
+.lt_main  .topBar.current{
+    padding-left: 0;
+}
+.lt_main  .topBar a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+}
+.lt_main .breadcrumb{
+   margin-top: 20px;
+}
+.modal p{
+    color: #d43f3a;;
+}
