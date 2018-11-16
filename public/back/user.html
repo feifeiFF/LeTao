@@ -81,33 +81,50 @@
         <table class="table table-hover table-bordered">
             <thead>
             <tr>
-                <th> yon</th>
-                <th> yon</th>
-                <th> yon</th>
-                <th></th>
-                <th></th>
+                <th> 序号 </th>
+                <th> 用户名</th>
+                <th> 手机号 </th>
+                <th> 状态 </th>
+                <th> 操作 </th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-            </tr>
             </tbody>
         </table>
 
 
     </div>
 </div>
-
+<!--模版引擎 渲染用户数据 -->
+<script type="text/template" id="tmp">
+    {{ each rows v i }}
+    <tr>
+        <td>{{ v.id  }}</td>
+        <td>{{ v.username }}</td>
+        <td>{{ v.mobile }}</td>
+        <!--判断用户状态 ， 1 表示正常状态  0表示禁用状态 -->
+        <td>
+            {{ v.isDelete === 1 ? "正常":"已禁用"}}
+        </td>
+        {{ if v.isDelete == 1}}
+        <td>
+           <button class="btn btn-danger">禁用</button>
+        </td>
+        {{ else  }}
+        <td>
+            <button class="btn btn-primary">启用</button>
+        </td>
+        {{ /if }}
+    </tr>
+    {{ /each }}
+</script>
 </body>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/isLogin.js"></script>
+<script src="./js/user.js"></script>
 </html>

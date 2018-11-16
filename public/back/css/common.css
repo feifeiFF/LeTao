@@ -141,3 +141,10 @@ ul {
 .modal .tips{
     color:#cf3535;
 }
+
+/*  表格部分   */
+.lt_main .container-fluid   .table-bordered>thead>tr>th,
+.lt_main .container-fluid   table.table-hover  tr  td {
+    text-align: center;
+    vertical-align: middle;
+}
