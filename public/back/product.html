@@ -2,24 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html><!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/common.css">
-    <title>后台管理系统首页</title>
+    <title>商品管理</title>
 </head>
 <body>
-<!--乐淘侧边栏-->
+<!-- 乐淘侧边栏 -->
 <div class="lt_aside body_bg">
     <!--标题-->
     <div class="brand"><a href="index.html">乐淘淘</a></div>
@@ -48,8 +39,8 @@
 
 </div>
 
-<!--乐淘模态框-->
-<div class="modal fade bs-example-modal-md" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+<!-- 乐淘模态框 登出 -->
+<div class="modal fade bs-example-modal-md" tabindex="-1" >
     <div class="modal-dialog modal-sm">
         <div class="modal-content">
             <div class="modal-header">
@@ -67,57 +58,169 @@
         </div>
     </div>
 </div>
+<!-- 乐淘模态框  添加商品 -->
+<div class="modal fade " tabindex="-1"  id="add_product">
+    <div class="modal-dialog ">
+        <div class="modal-content">
+            <form id="form_addProduct" >
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span >&times;</span></button>
+                    <h4 class="modal-title">添加商品</h4>
+                </div>
+                <div class="modal-body">
+                    <!-- 下拉菜单 -->
+                    <div class="form-group " style="margin-bottom: -5px">
+                        <div class="dropdown">
+                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" >
+                                <span class="secondName"> 请选择二级分类</span>
+                                <span class="caret"></span>
+                            </button>
+                        <ul class="dropdown-menu" >  </ul>
+                        </div>
+                        <input type="hidden" name="brandId" >
+                        <input type="hidden" name="statu" value="1">
+                    </div>
 
+                    <!-- 输入商品名称 -->
+                    <div class="form-group">
+                        <label for="proName"></label>
+                        <input type="text" class="form-control" id="proName" placeholder="请输入商品名称" name="proName">
+                    </div>
 
+                    <!-- 输入商品描述 -->
+                    <div class="form-group">
+                        <label for="proDesc"></label>
+                        <textarea type="text" class="form-control" id="proDesc" placeholder="请输入商品描述" name="proDesc" style="resize: none"></textarea>
+                    </div>
 
-<!--乐淘主面板-->
+                    <!-- 输入商品库存 -->
+                    <div class="form-group">
+                        <label for="num"></label>
+                        <input type="text" class="form-control" id="num" placeholder="请输入商品库存" name="num">
+                    </div>
+
+                    <!-- 输入商品尺码 -->
+                    <div class="form-group">
+                        <label for="productSize"></label>
+                        <input type="text" class="form-control" id="productSize" placeholder="请输入商品尺码" name="size">
+                    </div>
+
+                    <!-- 输入商品原价 -->
+                    <div class="form-group">
+                        <label for="oldPrice"></label>
+                        <input type="text" class="form-control" id="oldPrice" placeholder="请输入商品原价" name="oldPrice">
+                    </div>
+
+                    <!-- 输入商品现价 -->
+                    <div class="form-group">
+                        <label for="price"></label>
+                        <input type="text" class="form-control" id="price" placeholder="请输入商品现价" name="price">
+                    </div>
+
+                    <!-- 上传图片 -->
+                    <div class="form-group" style="margin-top: 15px">
+                        <label for="uploadFile" class="btn btn-default">上传图片</label>
+                        <input multiple type="file" class="form-control" id="uploadFile"style="display: none" name="pic1" data-url="/product/addProductPic" accept="image/*">
+                    </div>
+                    <div   class="form-group imgBox">
+                        <!-- 假设只能上传 3 张图片 -->
+                        <input type="hidden" class="form-control"  placeholder="" name="picStatus">
+
+                    </div>
+
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="submit" class="btn btn-danger btn-add-seCate">确定</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- 乐淘主面板 -->
 <div class="lt_main">
-    <!--topBar -->
+    <!-- topBar -->
     <div class="lt_topBar">
         <a href="#" class="pull-left icon_menu"><i class="glyphicon glyphicon-align-justify"></i></a>
         <a href="#" class="pull-right icon_logOut" data-toggle="modal" data-target=".bs-example-modal-md"><i class="glyphicon glyphicon-log-out"></i></a>
     </div>
 
-    <!--内容区-->
+    <!-- 内容区 -->
     <div class="container-fluid">
-        <!--路径导航-->
+        <!-- 路径导航 -->
         <ol class="breadcrumb">
             <li><a href="index.html">管理系统</a></li>
             <li class="active">商品管理</li>
         </ol>
 
-        <!--表格-->
-        <table class="table table-hover table-bordered">
+        <!-- 添加商品 -->
+        <button class="btn btn-default btn-add-product">添加商品</button>
+
+        <!-- 表格 -->
+        <table class="table table-hover table-bordered mt_20">
             <thead>
             <tr>
                 <th> 序号 </th>
-                <th> 用户名</th>
-                <th> 手机号 </th>
-                <th> 状态 </th>
+                <th> 商品名称</th>
+                <th> 商品描述 </th>
+                <th> 商品库存 </th>
+                <th> 商品尺寸 </th>
+                <th> 商品状态 </th>
                 <th> 操作 </th>
             </tr>
             </thead>
             <tbody>
-            <tr>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-                <td>4545</td>
-            </tr>
             </tbody>
         </table>
 
+        <!--商品管理 分页区-->
+        <div class="product_page text-right">
+            <ul id="pagintor"></ul>
+        </div>
 
     </div>
 </div>
 
+
+<!-- 模版引擎  商品信息渲染-->
+<script type="text/template" id="productTmp">
+   {{ each rows v i }}
+   <tr>
+       <td >{{ (page-1)*size + i + 1 }}</td>
+       <td width="25%">{{ v.brandId }}</td>
+       <td width="25%">{{ v.proDesc }}</td>
+       <td >{{ v.num }}</td>
+       <td>{{ v.size }}</td>
+       <td>{{ v.statu }}</td>
+       <td>
+          {{   if v.statu === 1 }}
+           <button class="btn  btn-danger">下架</button>
+           {{ else }}
+           <button class="btn btn-success">上架</button>
+           {{ /if }}
+       </td>
+   </tr>
+    {{ /each }}
+</script>
+<!-- 模版引擎 渲染二级分类 -->
+<script type="text/template" id="secondCate">
+    {{ each rows v i }}
+     <li><a href="#" data-id="{{ v.id }}"> {{ v.brandName }}</a></li>
+    {{ /each }}
+</script>
+
 </body>
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="./lib/jquery-fileupload/jquery.ui.widget.js"></script>
+<script src="./lib/jquery-fileupload/jquery.fileupload.js"></script>
 <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
+<script src="lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/isLogin.js"></script>
+<script src="./js/product.js"></script>
 </html>

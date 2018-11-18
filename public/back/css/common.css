@@ -151,3 +151,6 @@ ul {
     text-align: center;
     vertical-align: middle;
 }
+.modal-content .form-group{
+    margin-bottom: 0px;
+}

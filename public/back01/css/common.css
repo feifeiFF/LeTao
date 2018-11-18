@@ -22,6 +22,9 @@ a:active
 .mt_150{
      margin-top: 150px;
 }
+.mt_20{
+    margin-top: 20px;
+}
 
  .panel .panel-heading{
      height: 60px;
@@ -136,4 +139,22 @@ a:active
 }
 .modal p{
     color: #d43f3a;;
+}
+
+/* 乐淘图表部分 */
+.Lt-container{
+    width: 100%;
+
+}
+.Lt-container .echars_left,
+.Lt-container .echars_right{
+    height: 400px;
+    width: 48%;
+}
+
+
+ /*  用户管理部分 */
+.container-fluid  .table-bordered>tbody>tr>td,
+.container-fluid  .table-bordered>thead>tr>th {
+    text-align: center;
 }

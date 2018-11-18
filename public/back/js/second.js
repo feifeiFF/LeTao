@@ -153,6 +153,7 @@ $("#form_addSecondCate").on("success.form.bv",function (e) {
         dataType:"json",
         success:function (info) {
            if(info.success){
+                currentPage=1; //只渲染第一页
                 render();
                $("#add_secondCate").modal("hide");
            }

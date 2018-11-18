@@ -3,7 +3,7 @@
 
 // ajax 的全局事件需=需要给 document 注册，固定写法
  $(document).ajaxStart(function () {
-     NProgress.state();
+     NProgress.start();
  });
 
 
@@ -40,6 +40,20 @@ $(function () {
   })
 
  //登出
- $(".lt_main .icon_logOut").click(function () {
+ $(".icon_logOut").click(function () {
+      $("#logOut_modal").modal("show");
 
-  })
+
+  });
+
+$(".btn-logOut").click(function () {
+    $.ajax({
+         url:"/employee/employeeLogout",
+         type:"get",
+         success:function (info) {
+             if(info.success){
+                  location.href="login.html";
+             }
+         }
+    })
+})

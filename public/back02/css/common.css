@@ -1,0 +1,130 @@
+.body_bg{
+    background-color: #222D32;
+}
+.mt_150{
+     margin-top: 150px;
+}
+html,body{
+    width: 100%;
+    height: 100%    ;
+
+}
+.white{
+    color: #fff;
+}
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration:none;
+}
+.lt_aside{
+    width: 180px;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    z-index: 999;
+    transition: all 1s;
+}
+.lt_aside.now{
+    left: -180px;
+}
+.lt_aside .lt_title{
+    width: 100%;
+    height: 50px;
+}
+.lt_aside .lt_title h3 {
+    margin: 0;
+    padding: 0;
+    line-height: 50px;
+    height: 50px;
+    text-align: center;
+
+}
+.lt_aside .lt_title h3 a{
+    display: block;
+    width: 100%;
+    height:100%;
+    background-color: #3e7fa9;
+}
+.lt_aside .lt_user {
+    width: 180px;
+    height: 180px;
+    text-align: center;
+    padding-top: 30px;
+
+}
+.lt_aside .lt_user img{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.lt_aside .lt_user p{
+    text-align: center;
+    line-height: 50px;
+    height: 50px;
+    font-size: 22px;
+}
+.lt_aside .lt_nav{
+    margin-top: 40px;
+}
+.lt_aside .lt_nav li  a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 40px;
+    color: #fff;
+}
+.lt_aside .lt_nav li  a i{
+    margin-right: 5px;
+}
+.lt_aside .lt_nav .cateBox a{
+    padding-left: 60px;
+}
+.lt_aside .lt_nav a.current {
+    background-color: #1D1F21;
+    border-left: 3px solid #006699;
+}
+.top_bar{
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    padding-left: 180px;
+    z-index: 666;
+    background-color: #3C8DBC;
+    transition: all 1s;
+}
+.top_bar.now{
+     padding-left: 0px;
+}
+.top_bar a{
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+]}
+.bog_content {
+    padding-top: 50px;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.bog_content.now{
+    padding-left: 0px;
+}
+.breadcrumb{
+    margin-top: 20px;
+}
+.logOut_mesg{
+    color: #d43f3a;
+}

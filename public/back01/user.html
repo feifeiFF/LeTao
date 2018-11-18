@@ -11,7 +11,7 @@
 <!--侧边栏-->
 <div class="lt_aside body_bg">
     <div class="lt_aside_title">
-        <a> 乐淘淘 </a>
+        <a href="index.html"> 乐淘淘 </a>
     </div>
     <div class="lt_user">
         <img src="./images/default.png" alt="">
@@ -31,7 +31,6 @@
     </div>
 </div>
 
-
 <!--乐淘主面板-->
 <div class="lt_main">
 
@@ -44,18 +43,78 @@
 
         <!-- 路径导航-->
         <ol class="breadcrumb">
-            <li><a href="#">管理系统</a></li>
+            <li><a href="index.html">管理系统</a></li>
             <li class="active"> 用户管理 </li>
         </ol>
+
+        <!--数据展示区 表格-->
+         <table class="table table-bordered table-hover">
+            <thead>
+               <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>手机号</th>
+                    <th>状态</th>
+                    <th>操作</th>
+               </tr>
+            </thead>
+             <tbody>
+             </tbody>
+         </table>
+
+        <!--分页-->
+        <div class="user-page text-right">
+             <ul id="pagenatior"></ul>
+        </div>
     </div>
 </div>
 
-
+<!-- 登出 模态框 -->
+<div class="modal fade" id="logOut_modal" tabindex="-1" >
+    <div class="modal-dialog  modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p><i class="glyphicon glyphicon-info-sign"></i>&nbsp;您确定要退出后台管理系统吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" class="btn btn-danger btn-logOut">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!--模版引擎  用户数据表-->
+<script type="text/template" id="user_tmp">
+  {{ each rows v i }}
+  <tr>
+      <td>{{  (page-1)*size + i + 1 }}</td>
+      <td>{{ v.username }}</td>
+      <td>{{ v.mobile }}</td>
+      <td>
+          {{  v.isDelete == 0 ? "正常" : "禁用"  }}
+      </td>
+      <td>
+          {{ if v.isDelete == 1 }}
+           <button class="btn btn-danger"> 禁用 </button>
+          {{ else }}
+           <button class="btn btn-default"> 启用 </button>
+          {{/if }}
+      </td>
+  </tr>
+  {{ /each }}
+</script>
 
 </body>
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="./js/isLogin.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/user.js"></script>
 </html>
