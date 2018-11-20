@@ -12,10 +12,27 @@ $(function () {
 
 
 //   图片自动轮播
-    //获得slider插件对象
+    // 获得slider插件对象
     var gallery = mui('.mui-slider');
     gallery.slider({
-        interval:2000//自动轮播周期，若为0则不自动播放，默认为0；
+        interval:2000//自动轮播周期，若为 0 则不自动播放，默认为0；
     });
+
+
+ // 通过传递参数，获取地址栏中的 value 值
+ function  getSearch(key) {
+     var url=window.location.search;     //"?key=%E5%8F%91%E9%80%81"
+         url=decodeURI(url);              //将字符串解码为 中文
+     var str= url.slice(1);              // 截取掉 ？
+     var arr =  str.split("&");
+     var obj={};
+    for(var i=0;i<arr.length;i++){
+         // 将数组中的每一项 用 = 分割 ，每一项下标为0 的作为 key ,下标为1的作为 value
+        obj[arr[i].split("=")[0]] =  arr[i].split("=")[1];
+    }
+    return obj[key];
+ }
+
+ console.log(  getSearch("key") );
 
 });

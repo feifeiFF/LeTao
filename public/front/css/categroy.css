@@ -1,0 +1,40 @@
+.cate_left,
+.cate_right{
+    /*    因为区域滚动是绝对定位的，所以需要将它的父元素相对定位 */
+    position: relative;
+    height: 100%;
+}
+.cate_left{
+    float: left;
+    width: 90px;
+}
+.cate_right{
+    overflow: hidden;
+    height: 100%;
+ }
+.cate_left  li a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    width: 100%;
+    background-color: #E3E4E5;
+    color: #666;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.cate_left  li a.current{
+    background-color: #fff;
+    border-right: none;
+}
+#secondCateBox{
+     padding: 10px;
+}
+#secondCateBox li{
+    float: left;
+    width: 33.3%;
+
+}
+#secondCateBox li p{
+    text-align: center;
+}

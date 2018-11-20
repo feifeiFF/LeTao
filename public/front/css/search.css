@@ -1,0 +1,45 @@
+.searchBox {
+    position: relative;
+    padding: 10px;
+    height: 64px;
+}
+.searchBox .ipt-box{
+    height: 34px;
+    font-size: 12px;
+    border: 1px solid  #007AF0;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    position: relative;
+}
+.lt_main .searchBox .btn-search {
+    right: 10px ;
+    top: 10px;
+    position: absolute;
+    height: 34px;
+    border-radiusr: 0 5px 5px 0;
+}
+.history{
+    padding: 0 10px;
+}
+.history .empty{
+    margin-right: 5px;
+}
+.history .history_content{
+    border: 1px dashed #ccc;
+
+}
+.history .history_content li{
+    font-size: 12px;
+    border-bottom: 1px dashed #ccc;
+    padding: 0px 10px;
+    height: 34px;
+    line-height: 34px;
+}
+.history .history_content li:last-child{
+    border-bottom: none;
+}
+.history .history_content .btn_delete{
+    height: 34px;
+    line-height: 34px;
+}

@@ -1,7 +1,8 @@
 $(function () {
-    var currentPage=1;
-    var pageSize=3;
-    var picArry=[];
+    var currentPage=1;  //当前页
+    var pageSize=3;     // 每一页的条数
+    var picArry=[];     // 存储多文件的上传时候的信息
+
     // 1--- 渲染首屏数据
     render();
 
@@ -27,7 +28,7 @@ $(function () {
                     currentPage:currentPage,
                     totalPages:Math.ceil(info.total/info.size),
                     onPageClicked:function(event, originalEvent, type,page){
-                        //为按钮绑定点击事件 page:当前点击的按钮值
+                        //为按钮绑定点击事件 page:当前点击的按钮值,
                         currentPage=page;
                         render();
                     }

@@ -7,13 +7,17 @@ ul{
     margin: 0;
     padding: 0;
 }
-
+img{
+    display: block;
+    width: 100%;
+    height: 100%;
+}
 .container{
     min-width: 320px;
     max-width: 640px;
     width: 100%;
     height: 100%;
-    background-color: lightcyan;
+    background-color: #FFFFFF;
     position: relative;
     margin: 0 auto;
     padding-top: 45px;
@@ -34,9 +38,12 @@ ul{
     background-color: #316699;
 }
 .lt_bottom{
+    min-width: 320px;
+    max-width: 640px;
     height: 55px;
     width: 100%;
     position: absolute;
+    z-index: 9999;
     left: 0px;
     bottom: 0px;
     background-color: #316699;
@@ -64,7 +71,9 @@ ul{
 .lt_top h3{
     padding-left: 45px;
     padding-right: 45px;
+    font-size: 20px;
     margin: 0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif ;
     line-height: 45px;
     text-align: center;
     font-weight: normal;
@@ -75,7 +84,8 @@ ul{
 .lt_bottom ul li {
     text-align: center;
     color: #FFFFFF;
-}.lt_bottom ul li p{
+}
+.lt_bottom ul li p{
     text-align: center;
     color: #FFFFFF;
 }
@@ -87,4 +97,10 @@ ul{
     float: left;
     color: #FFFFFF;
 
+}
+
+.lt_bottom  ul li a.current,
+.lt_bottom  ul li a.current p
+{
+    color: gold;
 }
