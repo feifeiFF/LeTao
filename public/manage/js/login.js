@@ -13,7 +13,7 @@ $(function() {
     // 配置图标
     feedbackIcons: {
       valid: 'glyphicon glyphicon-ok',
-      invalid: 'glyphicon glyphicon-remove',
+      invalid: 'glyphicon glyphico-remove',
       validating: 'glyphicon glyphicon-refresh'
     },
 

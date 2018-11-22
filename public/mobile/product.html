@@ -63,20 +63,20 @@
 
     <!-- 图片区域 -->
     <div class="mui-slider-group mui-slider-loop">
-      <!-- 添加假图, 最后一张图片 -->
-      <div class="mui-slider-item mui-slider-item-duplicate">
-        <a href="#"><img src="{{ pic[pic.length-1].picAddr }}" /></a>
-      </div>
-
-      {{ each pic v i }}
-        <div class="mui-slider-item"><a href="#"><img src="{{ v.picAddr }}" /></a></div>
-      {{ /each }}
-
-      <!-- 添加假图, 第一张图片 -->
-      <div class="mui-slider-item mui-slider-item-duplicate">
-        <a href="#"><img src="{{ pic[0].picAddr }}" /></a>
-      </div>
+    <!-- 添加假图, 最后一张图片 -->
+    <div class="mui-slider-item mui-slider-item-duplicate">
+      <a href="#"><img src="{{ pic[pic.length-1].picAddr }}" /></a>
     </div>
+
+    {{ each pic v i }}
+    <div class="mui-slider-item"><a href="#"><img src="{{ v.picAddr }}" /></a></div>
+    {{ /each }}
+
+    <!-- 添加假图, 第一张图片 -->
+    <div class="mui-slider-item mui-slider-item-duplicate">
+      <a href="#"><img src="{{ pic[0].picAddr }}" /></a>
+    </div>
+  </div>
 
     <!-- 小圆点结构 -->
     <div class="mui-slider-indicator">

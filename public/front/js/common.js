@@ -19,6 +19,16 @@ $(function () {
     });
 
 
+
+//  点击回退按钮 回退
+$(".icon_left").click(function () {
+    window.history.back();
+})
+
+
+});
+
+
  // 通过传递参数，获取地址栏中的 value 值
  function  getSearch(key) {
      var url=window.location.search;     //"?key=%E5%8F%91%E9%80%81"
@@ -33,6 +43,4 @@ $(function () {
     return obj[key];
  }
 
- console.log(  getSearch("key") );
-
-});
+ // getSearch("key");

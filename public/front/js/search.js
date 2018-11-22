@@ -15,7 +15,7 @@ $(function () {
     getHistory();
     //  用于获取历史记录
    function  getHistory() {
-       var jsonStr=localStorage.getItem("search_list");
+       var jsonStr=localStorage.getItem("search_list")||"[]";
        var arr=JSON.parse(jsonStr);
        // console.log(arr);
        return arr;

@@ -37,3 +37,43 @@
 .sort a i{
     margin-left: 5px;
 }
+.product{
+    width: 100%;
+    padding: 10px;
+
+}
+.lt_product_item{
+    float: left;
+    width: 48%;
+    margin-top: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.lt_product_item:nth-child(2n-1){
+    margin-right: 4%;
+}
+.btn-like{
+    margin-bottom: 10px;
+}
+.loading{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: 40%;
+    border: 3px solid #3C8DBC;
+    animation: loop 1s infinite;
+}
+@keyframes loop {
+ form{
+      transform: rotate(0deg);
+ }
+to{
+     transform: rotate(360deg);
+}
+}
+
+.sort a.current{
+  color:orange;
+
+}

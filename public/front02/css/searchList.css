@@ -1,0 +1,35 @@
+.search{
+    padding: 10px;
+    position: relative;
+
+}
+.search .ipt_box{
+    height: 34px;
+    border: 1px solid #3C8DBC;
+    border-radius: 5px;
+    font-size: 12px;
+
+ }
+.search .btn_search{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 34px;
+    border-radius: 0 5px 5px 0 ;
+}
+.history{
+    padding:0 10px;
+}
+.history ul{
+    border: 1px dashed #cccccc;
+}
+.history  li{
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px dashed #ccc;
+    padding: 0 10px;
+}
+.history  li:last-child{
+     border-bottom: none;
+}

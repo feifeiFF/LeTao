@@ -1,0 +1,16 @@
+.sort{
+
+}
+.sort li a{
+    float: left;
+    width: 25%;
+    font-size: 12px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #e3e3e3;
+    text-align: center;
+    color: #666666;
+}
+.sort li a i{
+    margin-left: 5px;
+}

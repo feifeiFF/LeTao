@@ -39,8 +39,7 @@ $(function() {
         console.log( info );
         // 用户名或者密码错误
         if ( info.error ) {
-          mui.toast("用户名或者密码错误");
-          return;
+           return;
         }
         // 登录成功
         if ( info.success ) {

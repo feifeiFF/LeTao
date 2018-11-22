@@ -1,0 +1,38 @@
+.cate_left,
+.cate_right{
+    position: relative;
+    height: 100%;
+}
+.cate_left{
+    float: left;
+    width: 90px;
+}
+.cate_right{
+    overflow: hidden;
+}
+.cate_left ul li{
+    width: 90px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+ }
+.cate_left ul li a{
+    color: #666666;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #E3E4E5;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.cate_left ul li a.current{
+    background-color: #fff;
+    border-right: none;
+}
+
+/*  二级分类 */
+.cate_right  ul li{
+    width: 33.3%;
+    text-align: center;
+    float: left;
+}

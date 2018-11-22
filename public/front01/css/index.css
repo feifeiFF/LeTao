@@ -1,0 +1,33 @@
+.banner {
+     padding:0 10px 10px 10px ;
+ }
+.banner ul li{
+    float: left;
+    width: 33.3% ;
+}
+.banner ul li a{
+
+    display: block;
+    width: 100%;
+}
+/* 商品列表 */
+.product ul{
+    padding:0 10px 10px 10px ;
+}
+.product ul li{
+    border:1px solid #cccccc;
+   width: 48%;
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.product li:nth-child(2n-1){
+    margin-right: 4%;
+}
+.product ul li .price{
+    color: #d43f3a;
+}
+.product ul li .oldPrice{
+    text-decoration: line-through;
+}

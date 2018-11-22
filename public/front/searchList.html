@@ -28,12 +28,18 @@
                     <button class="mui-btn mui-btn-primary btn-search">搜索</button>
                 </div>
                 <!-- 排序依据 -->
-                <div class="sort">
-                    <a href="#">上架时间<i class="fa fa-angle-down"></i></a>
-                    <a href="#">价格<i class="fa fa-angle-down"></i></a>
-                    <a href="#">库存<i class="fa fa-angle-down"></i></a>
+                <div class="sort mui-clearfix">
+                    <a href="#" >上架时间<i class="fa fa-angle-down"></i></a>
+                    <a href="#" data-type="price">价格<i class="fa fa-angle-down"></i></a>
+                    <a href="#" data-type="num">库存<i class="fa fa-angle-down"></i></a>
                     <a href="#">折扣<i class="fa fa-angle-down"></i></a>
                 </div>
+                <!-- 商品列表 -->
+                <div class="product">
+                     <ul >
+                    </ul>
+                </div>
+
             </div>
         </div>
     </div>
@@ -71,9 +77,29 @@
 </div>
 
 
+<!-- 模版引擎 商品列表 -->
+<script type="text/template" id="productTmp">
+        {{  each data v i }}
+        <li class="lt_product_item">
+            <a href="product.html?productId={{ v.id }}">
+                <img src="{{ v.pic[0].picAddr }}" alt="">
+                <p class="info mui-ellipsis-2">{{ v.proName }}</p>
+                <p>
+                    <span class="price">￥{{ v.price }}</span>
+                    <span class="oldPrice">￥{{  v.oldPrice}}</span>
+                </p>
+                <button class="mui-btn mui-btn-danger btn-like">立即购买</button>
+            </a>
+        </li>
+        {{ /each }}
+</script>
+
 </body>
 <script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
-<script src="lib/mui/js/mui.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/searchList.js"></script>
+
+
 </html>
